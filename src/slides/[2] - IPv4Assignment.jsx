@@ -1,6 +1,7 @@
 import React from 'react'
 
 export const order = 2
+export const images = ['/StaticAssignment.png','/DynamicAssignment.png']
 
 export default function IPv4Assignment() {
   return (

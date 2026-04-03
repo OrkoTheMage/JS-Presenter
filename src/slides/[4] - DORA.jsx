@@ -1,6 +1,7 @@
 import React from 'react'
 
 export const order = 4
+export const images = ['/DORA.png']
 
 export default function DORA() {
   return (

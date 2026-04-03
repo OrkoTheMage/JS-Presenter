@@ -1,6 +1,7 @@
 import React from 'react'
 
 export const order = 5
+export const images = ['/DHCPScope.png','/DHCPReservation.png']
 
 export default function DHCPScope() {
   return (

@@ -19,7 +19,7 @@ export default function Welcome() {
             <li>DORA: Discover, Offer, Request, Acknowledge message flow</li>
             <li>Lease lifecycle and leasing behavior</li>
             <li>DHCP scopes, ranges, and reservations</li>
-            <li>Server setup, configuration, and a short demo</li>
+            <li>Server setup and configuration</li>
             <li>Fun facts and Q&amp;A</li>
           </ul>
         </section>

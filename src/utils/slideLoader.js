@@ -6,11 +6,12 @@ const slideEntries = Object.entries(slideModules).map(([path, mod]) => {
   const numMatch = path.match(/\d+/)
   const fileNumber = numMatch ? Number(numMatch[0]) : NaN
   const order = explicitOrder ?? (!Number.isNaN(fileNumber) ? fileNumber : Infinity)
+  const images = mod.images ?? []
 
   if (Component) {
     if (!Component.downslides || Component.downslides.length === 0) {
       const downslideExports = Object.keys(mod)
-        .filter((k) => k !== 'default' && k !== 'order')
+        .filter((k) => k !== 'default' && k !== 'order' && k !== 'images')
         .sort()
         .map((k) => mod[k])
         .filter(Boolean)
@@ -18,7 +19,7 @@ const slideEntries = Object.entries(slideModules).map(([path, mod]) => {
     }
   }
 
-  return { path, Component, order }
+  return { path, Component, order, images }
 })
 
 slideEntries.sort((a, b) => {
@@ -27,5 +28,6 @@ slideEntries.sort((a, b) => {
 })
 
 export const slides = slideEntries.map((e) => e.Component)
+export const slideImages = slideEntries.map((e) => e.images || [])
 
 export default slides

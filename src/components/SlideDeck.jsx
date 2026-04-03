@@ -5,7 +5,8 @@ import ProgressTracker from './ProgressTracker.jsx'
 import OverviewButton from './OverviewButton.jsx'
 import VerticalTracker from './VerticalTracker.jsx'
 import OverviewGrid from './OverviewGrid.jsx'
-import { slides } from '../utils/slideLoader.js'
+import { slides, slideImages } from '../utils/slideLoader.js'
+import { preloadImages } from '../utils/imagePreloader.js'
 import { checkAndUpdateAxis } from '../utils/axisGuard.js'
 
 export default function SlideDeck() {
@@ -63,6 +64,15 @@ export default function SlideDeck() {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [next, prev, index, vIndex, slides])
+
+  useEffect(() => {
+    // Preload images for the next 1-2 slides so they render quickly when navigated to
+    const nextImgs = [
+      ...(slideImages[index + 1] || []),
+      ...(slideImages[index + 2] || [])
+    ]
+    if (nextImgs.length) preloadImages(nextImgs)
+  }, [index])
 
   
 

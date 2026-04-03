@@ -1,6 +1,7 @@
 import React from 'react'
 
 export const order = 3
+export const images = ['/DHCPLeasing.png','/DHCPLeasingExpired.png']
 
 export default function Leasing() {
   return (
