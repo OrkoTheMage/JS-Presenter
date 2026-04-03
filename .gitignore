@@ -19,7 +19,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Yarn (Berry/modern) artifacts
+# Yarn (Berry/modern) artifacts all safe to ignore
 .pnp.cjs
 .pnp.js
 .yarn/cache/
