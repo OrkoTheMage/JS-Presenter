@@ -20,6 +20,7 @@ yarn-error.log*
 .pnp.cjs
 .pnp.js
 .yarn/cache/
+.yarn
 
 # Build / cache
 .cache/
