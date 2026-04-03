@@ -7,9 +7,9 @@ export default function OverviewGrid({ slides, setIndex, setVIndex, showOverview
   const dragRef = useRef({ active: false, startX: 0, startY: 0, scrollLeft: 0, scrollTop: 0 })
   const [isDragging, setIsDragging] = useState(false)
 
-  const PARENT_TILE_W = 192 // w-48
-  const PARENT_TILE_H = 160 // h-40
-  const DOWN_TILE_W = 160 // w-40
+  const PARENT_TILE_W = 192
+  const PARENT_TILE_H = 160
+  const DOWN_TILE_W = 160
 
   const RATIO = PREVIEW_SRC_H / PREVIEW_SRC_W
   const PARENT_CONTENT_W = PARENT_TILE_W

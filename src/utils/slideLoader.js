@@ -1,5 +1,3 @@
-// Centralized loader for presentation slides.
-// Moves dynamic import, ordering and downslide stitching out of SlideDeck.
 const slideModules = import.meta.glob('../slides/*.jsx', { eager: true })
 
 const slideEntries = Object.entries(slideModules).map(([path, mod]) => {

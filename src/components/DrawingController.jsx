@@ -25,14 +25,12 @@ export default function DrawingController({ color, setColor, showPalette, setSho
       clearFirstRunRef.current = true
       return
     }
-    // when parent signals a clear, briefly highlight the clear button
     setClearHighlighted(true)
     const t = setTimeout(() => setClearHighlighted(false), 300)
     return () => clearTimeout(t)
   }, [clearSignal])
 
   useEffect(() => {
-    // debounce closing so moving pointer from controller to palette doesn't immediately hide it
     if (!rootHovered && !paletteHovered) {
       closeTimerRef.current = setTimeout(() => setShowPalette(false), 120)
     } else {

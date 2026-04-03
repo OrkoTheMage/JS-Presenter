@@ -11,8 +11,6 @@ export default function RepoLink({ repoLink = 'https://example.com/dummy-repo' }
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch (e) {
-      // fall back to prompt if clipboard API unavailable
-      // eslint-disable-next-line no-alert
       window.prompt('Copy this link', repoLink)
     }
   }

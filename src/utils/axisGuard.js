@@ -1,4 +1,3 @@
-// Helpers for guarding against mixed-axis rapid navigation events.
 export function checkAndUpdateAxis(lastAxisRef, key, now = Date.now(), threshold = 250) {
   const axis = (key === 'ArrowLeft' || key === 'ArrowRight') ? 'h'
     : (key === 'ArrowUp' || key === 'ArrowDown') ? 'v'

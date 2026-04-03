@@ -13,7 +13,6 @@ export default function SlideDeck() {
   const [vIndex, setVIndex] = useState(-1)
   const [showOverview, setShowOverview] = useState(false)
   const transitionMs = 280
-  // OverviewGrid handles the overview UI (previews, drag, scrolling)
   
 
   const next = useCallback(() => {
@@ -30,14 +29,12 @@ export default function SlideDeck() {
     setVIndex(-1)
   }, [index])
 
-  // track last handled axis/time to avoid handling two different axes together
   const lastAxisRef = useRef({ axis: null, time: 0 })
 
   useEffect(() => {
-    // Guard to prefer a single axis when multiple arrow keys hit nearly simultaneously.
-    // Use centralized helper to keep SlideDeck focused on navigation behavior.
+    
     const onKey = (e) => {
-      // Allow Overview toggle with Escape immediately
+      
       if (e.key === 'Escape') {
         setShowOverview((s) => !s)
         return
@@ -70,7 +67,6 @@ export default function SlideDeck() {
   
 
   const Current = slides[index]
-  // prefer transparent deck so global off-white + vignette shows through
   const bgClass = (Current && Current.bgClass) ? Current.bgClass : 'bg-transparent text-gray-900'
   const downslides = (Current && Current.downslides) || []
 

@@ -15,7 +15,6 @@ export default function DrawingOverlay() {
     const onKeyWithDraw = (e) => {
       if (e.key === 'd' || e.key === 'D') setDrawingEnabled((s) => !s)
       if (e.key === 'c' || e.key === 'C') {
-        // perform clear and signal controller to highlight
         strokesRef.current = []
         const cvs = canvasRef.current
         if (cvs) {

@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback, useState, useRef } from 'react'
 import styled from '@emotion/styled'
-import IOButton from './IOButton.jsx'
+import IOButton from '../styles/IOButton.jsx'
 
 const Screen = styled.div`
   position: fixed;
@@ -9,7 +9,7 @@ const Screen = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #2b2b2b; /* warm dark grey backdrop */
+  background: #2b2b2b;
 `
 
 

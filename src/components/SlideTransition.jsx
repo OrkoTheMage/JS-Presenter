@@ -10,7 +10,6 @@ export default function SlideTransition({ slides, index, vIndex = -1, downslides
   const lastV = useRef(vIndex)
 
   useEffect(() => {
-    // determine whether top-level index changed (horizontal) or vertical index changed
     if (index !== lastIndex.current) {
       const from = lastIndex.current
       const to = index
@@ -52,7 +51,6 @@ export default function SlideTransition({ slides, index, vIndex = -1, downslides
 
   return (
     <div className="w-full max-w-4xl p-8 relative">
-      {/* Always keep top-level slides mounted to avoid mount delay when returning from vertical slides */}
       <>
         {PrevTop && (
           <div className={`absolute inset-0 ${direction === 'forward' ? 'slide-out-right' : 'slide-out-left'} z-0 ${isVerticalActive ? 'opacity-0 pointer-events-none' : ''}`}>
@@ -65,10 +63,8 @@ export default function SlideTransition({ slides, index, vIndex = -1, downslides
         </div>
       </>
 
-      {/* When vertical slides are active, they replace the current top-level slide */}
       {isVerticalActive && (
         <>
-              {/* Render vertical slides immediately; pick animation classes based on direction with sensible defaults */}
               {PrevDown && (
                 <div className={`absolute inset-0 ${direction === 'down' ? 'slide-out-up' : direction === 'up' ? 'slide-out-down' : 'slide-out-up'} z-10`}>
                   <PrevDown />
