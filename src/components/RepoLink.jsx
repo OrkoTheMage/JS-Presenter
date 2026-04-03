@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 export default function RepoLink({ repoLink = 'https://example.com/dummy-repo' }) {
   const [copied, setCopied] = useState(false)
 
+  const displayLink = repoLink.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')
+
   async function copyRepo() {
     try {
       await navigator.clipboard.writeText(repoLink)
@@ -26,9 +28,9 @@ export default function RepoLink({ repoLink = 'https://example.com/dummy-repo' }
       <div className="flex items-center justify-between">
         <div>
           <div className="text-lg font-medium text-center text-white/80 group-hover:text-black">Repo Link</div>
-          <div className="text-sm text-blue-400/70 group-hover:text-blue-400 truncate">{repoLink}</div>
+          <div className="text-sm text-blue-400/70 group-hover:text-blue-400 truncate" title={repoLink}>{displayLink}</div>
         </div>
-        <div className="ml-4 text-sm text-green-600 font-semibold ">
+        <div className="ml-4 text-sm text-green-600 font-semibold text-center ">
           {copied ? 'Copied!' : 'Click to copy'}
         </div>
       </div>

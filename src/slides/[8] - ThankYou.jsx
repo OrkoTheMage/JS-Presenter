@@ -4,7 +4,7 @@ import RepoLink from '../components/RepoLink'
 export const order = 8
 
 export default function ThankYou() {
-  const repoLink = 'https://example.com/dummy-repo'
+  const repoLink = 'https://github.com/OrkoTheMage/js-presenter'
 
   return (
     <div className="flex flex-col items-center justify-center text-center h-full gap-8 relative">
