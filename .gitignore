@@ -1,3 +1,6 @@
+.yarn
+.pnp.*
+.yarnrc.yml
 node_modules/
 dist/
 .env
