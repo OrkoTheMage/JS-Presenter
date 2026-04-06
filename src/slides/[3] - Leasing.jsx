@@ -25,7 +25,7 @@ export function LeasingDown() {
   return (
     <div className="flex flex-col items-start justify-center text-left h-full gap-8">
       <img src="/DHCPLeasingExpired.png" alt="Diagram" className="w-full h-auto max-h-[700px] object-contain mx-auto" />
-      <h2 className="text-5xl font-semibold font-covered mb-2 mt-20">Leasing Expiring</h2>
+      <h2 className="text-5xl font-semibold font-covered mb-2 mt-20">Lease Expiry</h2>
       <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-black marker:mr-2">
         <li>A lease expires when the client fails to renew it before the lease duration ends</li>
         <li>
