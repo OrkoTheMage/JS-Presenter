@@ -31,8 +31,8 @@ export function LeasingDown() {
         <li>
           Renewal timers:
           <ul className="list-disc list-inside ml-6 space-y-2 my-2">
-            <li><strong>T1</strong> (renewal) at ~50% — client unicasts <strong>DHCPREQUEST</strong> to original server</li>
-            <li><strong>T2</strong> (rebinding) at ~87.5% — if no response to T1, client broadcasts DHCPREQUESTto servers</li>
+            <li><strong>T1</strong> (renewal) at ~50% — client unicasts <strong>DHCPREQUEST</strong> to its original server</li>
+            <li><strong>T2</strong> (rebinding) at ~87.5% — if no response to T1, client broadcasts <strong>DHCPREQUEST</strong> to any available DHCP server (not just the original)</li>
           </ul>
         </li>
         <li>If a server replies with a <strong>DHCPACK</strong> (to T1 or T2), the lease is renewed; otherwise the lease eventually expires and the client must obtain a new address</li>
