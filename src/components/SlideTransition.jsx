@@ -50,7 +50,7 @@ export default function SlideTransition({ slides, index, vIndex = -1, downslides
   const isVerticalActive = CurrentDown != null || PrevDown != null
 
   return (
-    <div className="w-full max-w-4xl p-8 relative">
+    <div className="w-full max-w-4xl p-8 relative h-full">
       <>
         {PrevTop && (
           <div className={`absolute inset-0 ${direction === 'forward' ? 'slide-out-right' : 'slide-out-left'} z-0 ${isVerticalActive ? 'opacity-0 pointer-events-none' : ''}`}>

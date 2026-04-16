@@ -7,6 +7,7 @@ module.exports = {
       fontFamily: {
         covered: ['"Covered By Your Grace"', 'cursive'],
         sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+        quantico: ['Quantico', 'sans-serif'],
       },
     },
   },
