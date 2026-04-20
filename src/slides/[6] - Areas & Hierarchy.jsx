@@ -7,10 +7,9 @@ export default function OSPFAreas() {
     <div className="flex flex-col items-start justify-center text-left h-full gap-8 text-white">
       <h2 className="text-5xl font-semibold font-quantico mb-2 mt-4">OSPF Areas & Hierarchy</h2>
       <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-3">
-        <li><strong>Backbone (Area 0):</strong> central transit area to which all other normal areas should connect.</li>
-        <li><strong>Area types:</strong> standard, stub, totally-stubby, and NSSA—used to control external route flooding and summarization.</li>
-        <li><strong>Hierarchy benefits:</strong> reduces routing table size and SPF computation by confining LSAs to areas where possible.</li>
-        <li><strong>Inter-area routing:</strong> ABRs summarize and redistribute routes between areas; ASBRs advertise external routes into OSPF.</li>
+       <li>You can likely see that LSDBs and Routing Tables will become large and filled with information if not properly <strong>segmented</strong>.</li>
+        <li>OSPF allows for hierarchical design using <strong>areas</strong>, which are logical groupings of routers and links that share the same LSDB. Limiting the <strong>scope</strong> of LSAs and <strong>reducing</strong> the size of routing tables within each area.</li>
+        <li>Through this hierarchical design, areas are connected to the <strong>backbone area (Area 0)</strong> through <strong>Area Border Routers (ABRs)</strong>, which summarize and filter routing information between areas.</li>
       </ul>
     </div>
   )
