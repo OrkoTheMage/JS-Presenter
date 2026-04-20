@@ -9,6 +9,10 @@ module.exports = {
         sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
         quantico: ['Quantico', 'sans-serif'],
       },
+      scale: {
+        '135': '1.35',
+        '140': '1.4',
+      },
     },
   },
   plugins: [],

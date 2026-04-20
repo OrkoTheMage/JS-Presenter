@@ -87,7 +87,7 @@ export default function SlideDeck() {
         <SlideTransition slides={slides} index={index} vIndex={vIndex} downslides={downslides} transitionMs={transitionMs} />
       </div>
 
-      <div className="absolute left-0 right-0 bottom-6 flex items-center justify-center pointer-events-auto">
+      <div className="absolute left-0 right-0 bottom-6 flex items-center justify-center pointer-events-auto z-30">
         <div className="flex items-center gap-4">
           {downslides.length > 0 && (
             <VerticalTracker index={vIndex} total={downslides.length} onSelect={(i) => setVIndex(i)} showArrow={vIndex === -1} />
