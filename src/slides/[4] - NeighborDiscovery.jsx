@@ -13,11 +13,9 @@ export default function NeighborDiscovery() {
       <div className='flex flex-col gap-4'>
         <h2 className=" text-5xl font-semibold font-quantico mb-4">Neighbor Discovery — Hello</h2>
         <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white markr:mr-2 space-y-3">
-          <li><strong>Hello Packet Contents:</strong> Hellos carry the sender's Router ID, Priority, HelloInterval, DeadInterval, Options field, and neighbor list.</li>
-          <li><strong>Router ID & Priority:</strong> The RID identifies the router; the priority helps elect DR/BDR on multi-access networks.</li>
-          <li><strong>Timers (Hello/Dead):</strong> `HelloInterval` controls how often Hellos are sent; `DeadInterval` determines when a neighbor is declared down.</li>
-          <li><strong>Options & Mask:</strong> The Options field (and network mask where applicable) advertise capabilities and subnet information used during adjacency decisions.</li>
-          <li><strong>Neighbor & DR/BDR Fields:</strong> Hellos list seen neighbors and include current DR/BDR info — this directly drives DR/BDR election and the transition to 2-Way/adjacency states.</li>
+          <li>In order to get to our goal of establishing adjacencies and synchronizing LSDBs, routers use <strong>Hello packets</strong> to discover and maintain neighbor relationships.</li>
+          <li>Hello packets contain information such as the <strong>router's ID</strong>, <strong>neighbor list</strong>, <strong>hello/dead intervals</strong>, and other parameters necessary for adjacency formation and maintenance.</li>
+          <li>Some of these parameters need to match between neighbors for an adjacency to form — this is called <strong>neighbor compatibility</strong>.</li>
         </ul>
       </div>
     </div>
