@@ -5,6 +5,7 @@ export const order = 5
 export default function OSPFAreas() {
   return (
     <div className="flex flex-col items-start justify-center text-left h-full gap-8 text-white">
+      <img src='/AreaTopology.png' alt='Routing Protocols' className='max-w-4xl self-center transform scale-140 mb-24 mr-30' />				
       <h2 className="text-5xl font-semibold font-quantico mb-2 mt-4">OSPF Areas & Hierarchy</h2>
       <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-3">
        <li>You can likely see that LSDBs and Routing Tables will become large and filled with information if not properly <strong>segmented</strong>.</li>

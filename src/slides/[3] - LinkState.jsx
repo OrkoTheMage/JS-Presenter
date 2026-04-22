@@ -13,8 +13,8 @@ export default function LSA() {
       <div className='flex flex-col gap-4'>
         <h2 className=" text-5xl font-semibold font-quantico mb-4">Link-State — LSAs</h2>
         <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white markr:mr-2 space-y-3">
-          <li><strong>What is Link State?</strong> Protocols like OSPF build a complete topology map (LSDB) populated by LSAs and keep them up-to-date.</li>
-          <li><strong>LSAs (Link-State Advertisments)</strong> are the packets used to share link-state information between routers.</li>
+          <li><strong>What is Link State?</strong> OSPF build a complete topology map (LSDB) populated by LSAs and keep them up-to-date.</li>
+          <li><strong>LSAs (Link-State Advertisments)</strong> are the packets used to share that link-state information between routers.</li>
           <li>Each router originates LSAs for its links and reliably <strong>floods</strong> them to all routers in the area to distribute topology info building the LSDB.</li>
         </ul>
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { preloadImage, preloadImages } from '../utils/imagePreloader'
-import HelloPacketNote from '../components/HelloPacketNote'
+import SideNote from '../components/SideNote'
 
 export const order = 4
 
@@ -8,6 +8,27 @@ export default function NeighborDiscovery() {
   useEffect(() => {
     preloadImage('/HelloPacket.png')
   }, [])
+  const sideNoteProps = {
+    title: 'Hello Packet:',
+    title2: 'Hover for details',
+    title2Hover: (
+      <>
+        Marked in <span className="text-blue-300">blue</span> are the parameters that require matching for compatibility.
+      </>
+    ),
+    contents: [
+      'Router ID',
+      { text: 'Hello / Dead Interval *', className: 'text-blue-300' },
+      'Neighbors',
+      { text: 'Area ID *', className: 'text-blue-300' },
+      'Router Priority',
+      'DR IP Address',
+      'BDR IP Address',
+      'Authentication',
+      { text: 'Password *', className: 'text-blue-300' },
+      { text: 'Stub Area Flag *', className: 'text-blue-300' },
+    ],
+  }
   return (
     <div className="relative flex flex-col items-start justify-center text-left h-full text-white">
       <img src='/HelloPacket.png' alt='Routing Protocols' className='max-w-4xl self-center transform scale-140 mb-40 mr-40' />
@@ -22,7 +43,7 @@ export default function NeighborDiscovery() {
           </ul>
         </div>
       </div>
-      <HelloPacketNote />
+      <SideNote {...sideNoteProps} />
     </div>
   )
 }
