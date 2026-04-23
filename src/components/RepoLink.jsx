@@ -4,6 +4,9 @@ export default function RepoLink({ repoLink = 'https://example.com/dummy-repo' }
   const [copied, setCopied] = useState(false)
 
   const displayLink = repoLink.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')
+  const shortDisplay = displayLink.length > 36
+    ? `${displayLink.slice(0, 20)}…${displayLink.slice(-15)}`
+    : displayLink
 
   async function copyRepo() {
     try {
@@ -26,7 +29,7 @@ export default function RepoLink({ repoLink = 'https://example.com/dummy-repo' }
       <div className="flex items-center justify-between">
         <div>
           <div className="text-lg font-medium text-center text-white/80 group-hover:text-black">Repo Link</div>
-          <div className="text-sm text-blue-400/70 group-hover:text-blue-400 truncate" title={repoLink}>{displayLink}</div>
+          <div className="text-sm text-blue-400/70 group-hover:text-blue-400 truncate block max-w-full overflow-hidden" title={repoLink}>{shortDisplay}</div>
         </div>
         <div className="ml-4 text-sm text-green-600 font-semibold text-center ">
           {copied ? 'Copied!' : 'Click to copy'}

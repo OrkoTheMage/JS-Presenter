@@ -10,11 +10,11 @@ export default function DynamicRouting() {
   return (
     <div className="flex flex-col items-start justify-center text-left h-full text-white">
       <div className='flex flex-col gap-4'>
-        <h2 className=" text-5xl font-semibold font-quantico mb-4">Dynamic Routing</h2>
-        <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white markr:mr-2 space-y-3">
+        <h2 className="text-5xl font-semibold mt-4 mb-4 font-quantico">Dynamic Routing</h2>
+        <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white markr:mr-2 space-y-4">
           <li><strong>What is a dynamic routing protocol?</strong> Software that lets routers discover topology and automatically exchange route information to build forwarding tables.</li>
           <li><strong>Scope:</strong> The scope of a routing protocol determines where it operates</li>
-            <ul className="list-[circle] ml-8 list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-2">
+            <ul className="list-[circle] ml-8 list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-3">
               <li><strong>IGP</strong> (Interior Gateway Protocol) — Operates within a single autonomous system (AS)</li>
               <li><strong>EGP</strong> (Exterior Gateway Protocol) — Operates between autonomous systems (ASes)</li>
             </ul>
@@ -34,7 +34,7 @@ export function DynamicRoutingDown() {
     <div className="flex flex-col items-start justify-center text-left h-full text-white">
       <img src='/RoutingProtocols.png' alt='Routing Protocols' className='max-w-4xl self-center transform scale-150' />
       <div className='flex flex-col gap-4'>
-        <h2 className="text-5xl font-semibold font-quantico mb-4">Routing Protocols</h2>
+        <h2 className="text-5xl font-semibold mt-4 mb-4 font-quantico">Routing Protocols</h2>
         <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-4">
           <li>
             <strong>RIP</strong> — a simple, slow convergence, routing IGP protocol with a hop-count metric and distance-vector algorithm. Best for very small networks.

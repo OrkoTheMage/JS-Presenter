@@ -26,7 +26,7 @@ export default function Welcome() {
 
         <section>
           <h2 className="text-5xl mt-8 font-semibold mb-4 font-quantico">Controls</h2>
-          <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2">
+          <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-2">
             <li><span className={keyBindClass}>←</span> <span className={keyBindClass}>→</span> : Next / Previous slide</li>
             <li><span className={keyBindClass}>↑</span> <span className={keyBindClass}>↓</span> : Move down / up into sub-slides</li>
             <li><span className={keyBindClass}>Esc</span> : Toggle overview grid</li>

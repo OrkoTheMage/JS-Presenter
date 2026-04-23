@@ -1,7 +1,7 @@
 import React from 'react'
 import { keyBindBlockClass, keyBindClass } from '../styles/keybindClass.js'
 
-export const order = 6
+export const order = 7
 
 export default function OSPFSetup() {
   return (
@@ -11,29 +11,14 @@ export default function OSPFSetup() {
           <h1 className="text-7xl text-center font-extrabold font-quantico">OSPF Configuration</h1>
         </div>
       </div>
-          <h2 className="text-5xl font-semibold mb-4 mt-12 font-quantico">Cisco Commands</h2>
-          <ol className="list-[decimal] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-2">
-            <li>Enter OSPF configuration mode: <code>router ospf 1</code></li>
-            <li>Set router ID: <code>router-id 1.1.1.1</code></li>
-            <li>Define network(s) and area(s): <code>network 10.0.0.0 0.0.0.255 area 0</code></li>
+          <h2 className="text-5xl font-semibold mt-4 mb-4 font-quantico">Cisco Commands</h2>
+          <ol className="list-[decimal] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-4">
+            <li>Enter OSPF configuration mode: <span className={keyBindClass}>router ospf 1</span></li>
+            <li>Set router ID: <span className={keyBindClass}>router-id 1.1.1.1</span></li>
+            <li>Define network(s) and area(s): <span className={keyBindClass}>network 10.0.0.0 0.0.0.255 area 0</span></li>
           </ol>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div className="w-full space-y-6">
+      <div className="w-full space-y-4">
         <section>
           <h4 className="text-2xl font-semibold mb-2">Backbone</h4>
           <div className="max-w-2xl">
@@ -108,17 +93,43 @@ export default function OSPFSetup() {
 export function OSPFSetupDown() {
   return (
     <div className="flex flex-col items-start justify-center text-left h-full gap-8 text-white">
-      <h2 className="text-5xl font-semibold font-quantico mb-2 mt-4">OSPF Options</h2>
-      <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-3">
+      <h2 className="text-5xl font-semibold mt-4 mb-4 font-quantico">OSPF Options</h2>
+      <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-4">
         <li>OSPF has many options and features that can be configured to optimize performance, enhance security, and provide additional functionality.</li>
         <li>Some of these options include:</li>
-        <ul className="list-[circle] ml-8 list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-2">
-          <li><strong>Authentication:</strong> OSPF supports various authentication methods to secure routing updates and prevent unauthorized access.</li>
-          <li><strong>Route Summarization:</strong> ABRs can summarize routes between areas to reduce the size of routing tables and improve efficiency.</li>
-          <li><strong>Virtual Links:</strong> Used to connect discontiguous areas to the backbone area (Area 0) when direct connectivity is not possible.</li>
-          <li><strong>Stub Areas:</strong> A type of area that does not receive external routes, which can help reduce routing overhead in certain scenarios.</li>
+        <ul className="list-[circle] ml-8 list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-3">
+          <li>
+            <strong>Process ID:</strong> A locally significant identifier for an OSPF instance; it lets a router run multiple OSPF processes and does not need to match other routers.
+            <div className="ml-6 list-inside leading-relaxed text-lg space-y-2">
+              <div><span className={keyBindClass}>router ospf 10</span> — starts OSPF process with ID 10</div>
+            </div>
+          </li>
+
+          <li>
+            <strong>Authentication:</strong> OSPF supports various authentication methods to secure routing updates and prevent unauthorized access.
+            <div className="ml-6 list-inside leading-relaxed text-lg space-y-2">
+              <div><span className={keyBindClass}>area 0 authentication message-digest</span></div>
+              <div><span className={keyBindClass}>ip ospf message-digest-key 1 md5 YOUR_KEY</span></div>
+            </div>
+          </li>
+
+          <li>
+            <strong>Cost Manipulation:</strong> OSPF allows manual adjustment of interface costs to influence path selection. This is helpful for distinguishing between Gigabit and Fast Ethernet interfaces, which, by default, have the same cost.
+            <div className="ml-6 list-inside leading-relaxed text-lg space-y-2">
+              <div><span className={keyBindClass}>interface FastEthernet0/1</span></div>
+              <div><span className={keyBindClass}>ip ospf cost 2</span></div>
+            </div>
+          </li>
+
+          <li>
+            <strong>Stub Areas:</strong> A type of area that does not receive external routes, which can help reduce routing overhead in certain scenarios.
+            <div className="ml-6 list-inside leading-relaxed text-lg space-y-2">
+              <div><span className={keyBindClass}>router ospf 1</span></div>
+              <div><span className={keyBindClass}>area 1 stub</span></div>
+            </div>
+          </li>
         </ul>
       </ul>
     </div>
   )
-}      
+}       
