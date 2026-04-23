@@ -1,4 +1,5 @@
 import React from 'react'
+import { keyBindClass } from '../styles/keybindClass'
 
 export const order = 5
 
@@ -19,11 +20,13 @@ export default function OSPFAreas() {
 export function OSPFAreasDown() {
   return (
     <div className="flex flex-col items-start justify-center text-left h-full gap-8 text-white">
-      <h2 className="text-5xl font-semibold font-quantico mb-2 mt-4">Area Design Considerations</h2>
+      <img src='/AreaTopology2.png' alt='Routing Protocols' className='max-w-4xl self-center transform scale-140 mb-24 mr-30' />				
+      <h2 className="text-5xl font-semibold font-quantico mb-2 mt-4">ABRs & Summaries</h2>
       <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-3">
-        <li>Avoid too many routers per area to keep SPF runtime reasonable.</li>
-        <li>Use summarization on ABRs to limit LSA propagation across area boundaries.</li>
-        <li>Design the backbone carefully; inter-area traffic must transit Area 0 (or use virtual links sparingly).</li>
+        <li>In this example, our <strong>ABRs</strong> are R2 and R3. They connect Area 0 to Areas 1 and 2.</li>
+        <li>ABRs have interfaces in two or more areas which allow them to perform <strong>route summarization</strong> about their connected areas to and from Area 0.</li>
+        <li>R2 will <strong>summarize</strong> the routes pertaining to the <span className={keyBindClass}>172.16.0.0/24</span> network and R3 will do the same for the <span className={keyBindClass}>192.168.0.0/24</span> network.</li>
+        <li>This allows for a more efficient use of bandwidth and resources, as routers in Area 0 only need to maintain <strong>summarized routes</strong> rather than detailed information about every network in the other areas.</li>
       </ul>
     </div>
   )

@@ -1,4 +1,5 @@
 import React from 'react'
+import { keyBindBlockClass } from '../styles/keybindClass.js'
 
 export const order = 6
 
@@ -7,30 +8,103 @@ export default function OSPFSetup() {
     <div className="flex flex-col items-start justify-center text-left h-full gap-8 text-white">
       <div className="w-full flex justify-center">
         <div className="inline-block p-8 border-8 rounded-xl bg-transparent border-white dark:border-white">
-          <h1 className="text-8xl text-center font-extrabold font-quantico">OSPF Configuration</h1>
+          <h1 className="text-7xl text-center font-extrabold font-quantico">OSPF Configuration</h1>
         </div>
       </div>
-      <h2 className="text-5xl font-semibold font-quantico mb-2 mt-6">Where OSPF runs</h2>
-      <ul className="list-disc list-inside leading-relaxed text-lg marker:text-white space-y-2">
-        <li><strong>Routers / L3 switches:</strong> OSPF is typically enabled on routers and layer-3 switches.</li>
-        <li><strong>Virtual routers:</strong> OSPF can run in virtual appliances or controllers for cloud and virtualized networks.</li>
-        <li><strong>Support:</strong> Most enterprise OSes (Cisco IOS/IOS-XE, JunOS, FRR, Quagga, Linux) support OSPF.</li>
-      </ul>
-      <h2 className="text-5xl font-semibold font-quantico mb-2 mt-6">Basic Cisco example</h2>
-      <pre className="bg-black/5 p-4 rounded text-sm text-white">
+          <h2 className="text-5xl font-semibold mb-4 mt-12 font-quantico">Cisco Commands</h2>
+          <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-2">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div className="w-full space-y-6">
+        <section>
+          <h4 className="text-2xl font-semibold mb-2">Backbone</h4>
+          <div className="max-w-2xl">
+            <h5 className="font-medium">Rtr1 — Backbone (area 0)</h5>
+            <div className={keyBindBlockClass}>
 {`router ospf 1
- network 10.0.0.0 0.0.0.255 area 0
- network 10.0.1.0 0.0.0.255 area 1
+ network 10.0.0.0 0.0.255.255 area 0
  passive-interface default
  no passive-interface GigabitEthernet0/0
 `}
-      </pre>
-      <h3 className="text-xl font-medium mt-4">Quick verification</h3>
-      <ul className="list-disc list-inside leading-relaxed text-lg marker:text-white space-y-2">
-        <li><strong>Neighbors:</strong> <code>show ip ospf neighbor</code></li>
-        <li><strong>Database:</strong> <code>show ip ospf database</code></li>
-        <li><strong>Routes:</strong> <code>show ip route ospf</code></li>
-      </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h4 className="text-2xl font-semibold mb-2">ABRs</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h5 className="font-medium">Rtr2 — ABR (area 0 &amp; 1)</h5>
+              <div className={keyBindBlockClass}>
+{`router ospf 1
+ network 10.0.0.0 0.0.255.255 area 0
+ network 172.16.0.0 0.0.0.255 area 1
+ passive-interface default
+ no passive-interface GigabitEthernet0/1
+`}
+              </div>
+            </div>
+
+            <div>
+              <h5 className="font-medium">Rtr3 — ABR (area 0 &amp; 2)</h5>
+              <div className={keyBindBlockClass}>
+{`router ospf 1
+ network 10.0.0.0 0.0.255.255 area 0
+ network 192.168.0.0 0.0.0.255 area 2
+ passive-interface default
+ no passive-interface GigabitEthernet0/1
+`}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h4 className="text-2xl font-semibold mb-2">Area routers</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h5 className="font-medium">Rtr4 — Area 1 (172.16.0.0/24)</h5>
+              <div className={keyBindBlockClass}>
+{`router ospf 1
+ network 172.16.0.0 0.0.0.255 area 1
+ passive-interface default
+ no passive-interface GigabitEthernet0/0
+`}
+              </div>
+            </div>
+
+            <div>
+              <h5 className="font-medium">Rtr5 — Area 2 (192.168.0.0/24)</h5>
+              <div className={keyBindBlockClass}>
+{`router ospf 1
+ network 192.168.0.0 0.0.0.255 area 2
+ passive-interface default
+ no passive-interface GigabitEthernet0/0
+`}
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   )
 }
