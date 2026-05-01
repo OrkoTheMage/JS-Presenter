@@ -39,3 +39,24 @@ export default function Welcome() {
     </div>
   )
 }
+
+export function WelcomeDown() {
+  return (
+    <div className="flex flex-col items-center justify-center h-full text-white">
+      <div className="inline-block p-8 border-8 rounded-xl bg-transparent border-white dark:border-white">
+        <h1 className="text-7xl text-white text-center font-extrabold font-quantico">Tech Stack</h1>
+      </div>
+      <div className="flex flex-col gap-4">
+        <section>
+          <h2 className="text-5xl font-semibold mb-4 mt-12 font-quantico">Built with</h2>
+          <ul className="list-[square] list-inside leading-relaxed text-lg marker:text-2xl marker:text-white marker:mr-2 space-y-2">
+            <li><strong>React:</strong> Component-based UI with hooks and functional components.</li>
+            <li><strong>Vite:</strong> Lightning-fast dev server and build tool.</li>
+            <li><strong>Tailwind CSS:</strong> Utility-first styling with PostCSS and Autoprefixer.</li>
+            <li><strong>Emotion:</strong> CSS-in-JS for dynamic styled components.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  )
+}
