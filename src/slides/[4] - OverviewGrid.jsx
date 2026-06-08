@@ -26,7 +26,7 @@ export default function OverviewGrid() {
 
       <div className="flex items-center gap-4 p-6 bg-white/5 rounded-xl border border-indigo-400/30">
         <span className="text-xl text-gray-300">Press</span>
-        <span className="text-3xl font-bold">{keyBindClass.replace('inline-block ', '')}Esc</span>
+        <span className={`${keyBindClass} text-3xl px-4 py-2`}> Esc </span>
         <span className="text-xl text-gray-300">to toggle</span>
       </div>
     </div>
