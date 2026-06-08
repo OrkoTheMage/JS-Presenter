@@ -18,12 +18,6 @@ export default function Title() {
         </p>
       </div>
 
-      <div className="mt-12 flex gap-6 text-lg">
-        <span className={keyBindClass}>React</span>
-        <span className={keyBindClass}>Vite</span>
-        <span className={keyBindClass}>Tailwind</span>
-        <span className={keyBindClass}>TypeScript</span>
-      </div>
     </div>
   )
 }
