@@ -7,7 +7,7 @@ export const order = 8
 export default function GetStarted() {
   return (
     <div className="flex flex-col items-center justify-center h-full text-gray-100">
-      <div className="inline-block p-12 border-8 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border-indigo-400/50 backdrop-blur-sm mb-12">
+      <div className="inline-block p-12 border-8 rounded-2xl bg-transparent border-white/50 mb-12">
         <h1 className="text-7xl text-gray-100 text-center font-bold">Get Started</h1>
       </div>
       
@@ -31,13 +31,6 @@ export default function GetStarted() {
 
       <RepoLink repoLink="https://github.com/OrkoTheMage/js-presenter" />
 
-      <div className="mt-12 flex gap-8 text-lg text-gray-400">
-        <span>MIT License</span>
-        <span>•</span>
-        <span>Built with ❤️</span>
-        <span>•</span>
-        <span>Open Source</span>
-      </div>
     </div>
   )
 }
