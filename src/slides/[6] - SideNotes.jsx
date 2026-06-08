@@ -57,25 +57,23 @@ export function SideNotesDown() {
 
         <div className="p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30">
           <h3 className="text-xl font-semibold mb-4">Stylized Items</h3>
-          <pre className="bg-black/50 p-4 rounded text-sm overflow-x-auto">
+          <pre className="bg-black/50 p-4 rounded text-xs overflow-x-auto">
 {`contents={[
-  'Plain text',
-  { text: 'Highlighted', className: 'text-blue-300' },
-  { text: 'Important', className: 'text-red-400 font-bold' },
+  'Item 1',
+  { text: 'Item 2', className: 'text-blue-300' },
+  { text: 'Item 3', className: 'text-red-400' },
 ]}`}
           </pre>
         </div>
 
         <div className="col-span-2 p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30">
           <h3 className="text-xl font-semibold mb-4">Custom Content</h3>
-          <pre className="bg-black/50 p-4 rounded text-sm overflow-x-auto">
+          <pre className="bg-black/50 p-4 rounded text-xs overflow-x-auto">
 {`<SideNote
-  title="Code Example"
+  title="Code"
   title2="Click to see"
   contents={
-    <pre className="text-sm">
-      const x = 42;
-    </pre>
+    <pre>const x = 42;</pre>
   }
 />`}
           </pre>
