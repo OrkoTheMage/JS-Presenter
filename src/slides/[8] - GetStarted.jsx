@@ -55,20 +55,19 @@ export function GetStartedDown() {
         
         <div className="p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30">
           <h3 className="text-xl font-semibold mb-4 text-blue-400">Slide Template</h3>
-          <pre className="text-sm text-gray-300">
+          <pre className="text-xs text-gray-300">
 {`export const order = 1
 
 export default function MySlide() {
   return (
-    <div className="flex items-center justify-center h-full text-gray-100">
+    <div className="flex items-center justify-center h-full">
       <h1>Hello!</h1>
     </div>
   )
 }
 
-// Optional: Vertical sub-slide
 export function MySlideDown() {
-  return <div>More content...</div>
+  return <div>More...</div>
 }`}
           </pre>
         </div>
