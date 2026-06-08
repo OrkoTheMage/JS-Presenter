@@ -1,22 +1,15 @@
 export default function SideNote({
-  title = 'Hello Packet:',
-  title2 = 'Hover for details',
+  title = 'Details:',
+  title2 = 'Hover to expand',
   title2Hover = (
     <>
-      Marked in <span className="text-blue-300">blue</span> are the parameters that require matching for compatibility.
+      Additional information appears on hover.
     </>
   ),
   contents = [
-    'Router ID',
-    { text: 'Hello / Dead Interval *', className: 'text-blue-300' },
-    'Neighbors',
-    { text: 'Area ID *', className: 'text-blue-300' },
-    'Router Priority',
-    'DR IP Address',
-    'BDR IP Address',
-    'Authentication',
-    { text: 'Password *', className: 'text-blue-300' },
-    { text: 'Stub Area Flag *', className: 'text-blue-300' },
+    'First detail',
+    'Second detail',
+    'Third detail',
   ],
 }) {
   const renderContents = Array.isArray(contents) ? (
@@ -36,13 +29,13 @@ export default function SideNote({
   )
 
   return (
-    <div className="absolute left-[-22rem] top-[53.5rem] p-4 w-80 bg-black/30 text-white rounded-lg S  group border border-white/20 z-10 hover:w-80 transition-all duration-300">
+    <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full ml-4 p-4 w-72 bg-indigo-950/80 backdrop-blur-sm text-gray-100 rounded-lg group border border-indigo-400/50 z-10 hover:bg-indigo-900/80 transition-all duration-300">
       <strong className="block text-xl text-center px-2">{title}</strong>
       <div className="text-center">
-        <span className="block text-sm group-hover:hidden">{title2}</span>
-        <span className="hidden text-sm group-hover:block">{title2Hover}</span>
+        <span className="block text-sm text-gray-400 group-hover:hidden">{title2}</span>
+        <span className="hidden text-sm text-gray-300 group-hover:block">{title2Hover}</span>
       </div>
-      <div className="mt-1 overflow-hidden max-h-0 group-hover:max-h-80 transition-all duration-300 px-2">
+      <div className="mt-1 overflow-hidden max-h-0 group-hover:max-h-60 transition-all duration-300 px-2">
         {renderContents}
       </div>
     </div>
