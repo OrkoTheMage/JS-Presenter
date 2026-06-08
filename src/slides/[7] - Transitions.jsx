@@ -5,7 +5,7 @@ export const order = 7
 
 export default function Transitions() {
   return (
-    <div className="flex flex-col items-center justify-center h-full text-white">
+    <div className="flex flex-col items-center justify-center h-full text-gray-100">
       <h2 className="text-6xl font-bold mb-8">Smooth Transitions</h2>
       <p className="text-2xl text-gray-300 mb-12">Professional slide transitions built-in</p>
       
@@ -46,41 +46,41 @@ export default function Transitions() {
 
 export function TransitionsDown() {
   return (
-    <div className="flex flex-col items-center justify-center h-full text-white">
+    <div className="flex flex-col items-center justify-center h-full text-gray-100">
       <h2 className="text-5xl font-bold mb-12">Available Features</h2>
       
       <div className="grid grid-cols-3 gap-6 max-w-4xl">
-        <div className="p-6 bg-white/10 rounded-xl border border-white/20 text-center">
+        <div className="p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30 text-center">
           <div className="text-4xl mb-4">📊</div>
           <h3 className="text-xl font-semibold mb-2">Progress Tracker</h3>
           <p className="text-gray-400 text-sm">Visual indicator of your position in the deck</p>
         </div>
         
-        <div className="p-6 bg-white/10 rounded-xl border border-white/20 text-center">
+        <div className="p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30 text-center">
           <div className="text-4xl mb-4">🧭</div>
           <h3 className="text-xl font-semibold mb-2">Vertical Tracker</h3>
           <p className="text-gray-400 text-sm">Navigate sub-slides with visual dots</p>
         </div>
         
-        <div className="p-6 bg-white/10 rounded-xl border border-white/20 text-center">
+        <div className="p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30 text-center">
           <div className="text-4xl mb-4">📝</div>
           <h3 className="text-xl font-semibold mb-2">Transitional Screen</h3>
           <p className="text-gray-400 text-sm">Animated transitions between slides</p>
         </div>
         
-        <div className="p-6 bg-white/10 rounded-xl border border-white/20 text-center">
+        <div className="p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30 text-center">
           <div className="text-4xl mb-4">🌗</div>
           <h3 className="text-xl font-semibold mb-2">Dark/Light Themes</h3>
           <p className="text-gray-400 text-sm">Multiple visual themes included</p>
         </div>
         
-        <div className="p-6 bg-white/10 rounded-xl border border-white/20 text-center">
+        <div className="p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30 text-center">
           <div className="text-4xl mb-4">📱</div>
           <h3 className="text-xl font-semibold mb-2">Responsive Design</h3>
           <p className="text-gray-400 text-sm">Works on any screen size</p>
         </div>
         
-        <div className="p-6 bg-white/10 rounded-xl border border-white/20 text-center">
+        <div className="p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30 text-center">
           <div className="text-4xl mb-4">🎨</div>
           <h3 className="text-xl font-semibold mb-2">Tailwind Powered</h3>
           <p className="text-gray-400 text-sm">Utility-first CSS for rapid styling</p>

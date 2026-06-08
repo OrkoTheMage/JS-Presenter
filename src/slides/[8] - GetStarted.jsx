@@ -6,9 +6,9 @@ export const order = 8
 
 export default function GetStarted() {
   return (
-    <div className="flex flex-col items-center justify-center h-full text-white">
-      <div className="inline-block p-12 border-8 rounded-2xl bg-transparent border-white/50 mb-12">
-        <h1 className="text-7xl text-white text-center font-bold">Get Started</h1>
+    <div className="flex flex-col items-center justify-center h-full text-gray-100">
+      <div className="inline-block p-12 border-8 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border-indigo-400/50 backdrop-blur-sm mb-12">
+        <h1 className="text-7xl text-gray-100 text-center font-bold">Get Started</h1>
       </div>
       
       <div className="text-center mb-8">
@@ -23,7 +23,7 @@ export default function GetStarted() {
         <span className={keyBindClass}>npm run dev</span>
       </div>
 
-      <div className="p-6 bg-white/5 rounded-xl border border-white/20 mb-8">
+      <div className="p-6 bg-white/5 rounded-xl border border-indigo-400/30 mb-8">
         <p className="text-xl text-center text-gray-300">
           Add your slides to <span className={keyBindClass}>src/slides/</span> and they're automatically loaded!
         </p>
@@ -44,11 +44,11 @@ export default function GetStarted() {
 
 export function GetStartedDown() {
   return (
-    <div className="flex flex-col items-center justify-center h-full text-white">
+    <div className="flex flex-col items-center justify-center h-full text-gray-100">
       <h2 className="text-5xl font-bold mb-12">Quick Reference</h2>
       
       <div className="grid grid-cols-2 gap-6 max-w-3xl w-full">
-        <div className="p-6 bg-white/10 rounded-xl border border-white/20">
+        <div className="p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30">
           <h3 className="text-xl font-semibold mb-4 text-green-400">File Structure</h3>
           <pre className="text-sm text-gray-300">
 {`src/
@@ -60,14 +60,14 @@ export function GetStartedDown() {
           </pre>
         </div>
         
-        <div className="p-6 bg-white/10 rounded-xl border border-white/20">
+        <div className="p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30">
           <h3 className="text-xl font-semibold mb-4 text-blue-400">Slide Template</h3>
           <pre className="text-sm text-gray-300">
 {`export const order = 1
 
 export default function MySlide() {
   return (
-    <div className="flex items-center justify-center h-full text-white">
+    <div className="flex items-center justify-center h-full text-gray-100">
       <h1>Hello!</h1>
     </div>
   )
@@ -80,7 +80,7 @@ export function MySlideDown() {
           </pre>
         </div>
         
-        <div className="col-span-2 p-6 bg-white/10 rounded-xl border border-white/20">
+        <div className="col-span-2 p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30">
           <h3 className="text-xl font-semibold mb-4 text-purple-400">Available Components</h3>
           <div className="grid grid-cols-3 gap-4 text-sm">
             <div><code className="text-purple-300">SideNote</code> - Hover panels</div>

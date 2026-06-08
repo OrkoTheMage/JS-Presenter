@@ -18,28 +18,35 @@ const GlobalStyles = () => (
 
       .bp-root{ position: relative; min-height: 100vh; }
 
-      /* Blueprint paper: deep blue with subtle grid + paper grain */
+      /* Clean gradient background with subtle geometric pattern */
       .blueprint-paper{
         position: relative;
-        background-color: var(--bp-dark);
-        color: #dfeeff;
-        background-image:
-          linear-gradient(rgba(255,255,255,0.035) 4px, transparent 4px),
-          linear-gradient(90deg, rgba(255,255,255,0.02) 4px, transparent 4px);
-        background-size: 48px 48px, 48px 48px;
-        background-position: center;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        color: #e8e8e8;
         overflow: hidden;
       }
 
-      /* subtle paper grain overlay */
+      /* Geometric accent shapes */
+      .blueprint-paper::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: 
+          radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+        pointer-events: none;
+      }
+
+      /* Subtle dot grid overlay */
       .blueprint-paper::after{
         content: "";
         position: absolute;
         inset: 0;
-        background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 2px);
-        opacity: 0.6;
+        background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
+        background-size: 32px 32px;
+        opacity: 0.8;
         pointer-events: none;
-        mix-blend-mode: overlay;
       }
 
       /* Liquid glass effect: true frosted glass using backdrop-filter */
