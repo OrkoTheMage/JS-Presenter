@@ -29,7 +29,7 @@ export default function SideNote({
   )
 
   return (
-    <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full ml-4 p-4 w-72 bg-indigo-950/80 backdrop-blur-sm text-gray-100 rounded-lg group border border-indigo-400/50 z-10 hover:bg-indigo-900/80 transition-all duration-300">
+    <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full mr-4 p-4 w-72 bg-indigo-950/80 backdrop-blur-sm text-gray-100 rounded-lg group border border-indigo-400/50 z-10 hover:bg-indigo-900/80 transition-all duration-300">
       <strong className="block text-xl text-center px-2">{title}</strong>
       <div className="text-center">
         <span className="block text-sm text-gray-400 group-hover:hidden">{title2}</span>
