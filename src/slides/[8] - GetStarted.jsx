@@ -55,18 +55,14 @@ export function GetStartedDown() {
         
         <div className="p-6 bg-indigo-500/10 rounded-xl border border-indigo-400/30">
           <h3 className="text-xl font-semibold mb-4 text-blue-400">Slide Template</h3>
-          <pre className="text-xs text-gray-300">
+          <pre className="text-xs text-gray-300 overflow-x-auto whitespace-pre">
 {`export const order = 1
 
-export default function MySlide() {
-  return (
-    <div className="flex items-center justify-center h-full">
-      <h1>Hello!</h1>
-    </div>
-  )
+export default function Slide() {
+  return <div>Hello!</div>
 }
 
-export function MySlideDown() {
+export function SlideDown() {
   return <div>More...</div>
 }`}
           </pre>
