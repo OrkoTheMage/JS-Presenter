@@ -9,7 +9,7 @@ export default function SideNotes() {
       <h2 className="text-6xl font-bold mb-8">Side Notes</h2>
       <p className="text-2xl text-gray-300 mb-12">Hover-reveal content panels</p>
 
-      <div className="relative w-full max-w-3xl">
+      <div className="relative ml-32 mr-32">
         <div className="p-8 bg-indigo-500/10 rounded-xl border border-indigo-400/30">
           <h3 className="text-3xl font-semibold mb-6">Main Slide Content</h3>
           <p className="text-xl text-gray-300 mb-4">
