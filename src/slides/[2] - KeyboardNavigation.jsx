@@ -11,8 +11,8 @@ export default function KeyboardNavigation() {
       <div className="flex items-center gap-16">
         <div className="flex flex-col items-center gap-6">
           <div className="flex gap-4">
-            <div className={keyBindClass}>&larr;</div>
-            <div className={keyBindClass}>&rarr;</div>
+            <div className={`${keyBindClass} text-4xl px-4 py-2`}>&larr;</div>
+            <div className={`${keyBindClass} text-4xl px-4 py-2`}>&rarr;</div>
           </div>
           <span className="text-2xl text-gray-300">Horizontal Navigation</span>
           <span className="text-lg text-gray-500">Move between slides</span>
@@ -22,8 +22,8 @@ export default function KeyboardNavigation() {
 
         <div className="flex flex-col items-center gap-6">
           <div className="flex gap-4">
-            <div className={keyBindClass}>&uarr;</div>
-            <div className={keyBindClass}>&darr;</div>
+            <div className={`${keyBindClass} text-4xl px-4 py-2`}>&uarr;</div>
+            <div className={`${keyBindClass} text-4xl px-4 py-2`}>&darr;</div>
           </div>
           <span className="text-2xl text-gray-300">Vertical Navigation</span>
           <span className="text-lg text-gray-500">Drill into sub-slides</span>
@@ -32,7 +32,7 @@ export default function KeyboardNavigation() {
 
       <div className="mt-16 p-8 bg-white/5 rounded-xl border border-indigo-400/30 max-w-2xl">
         <p className="text-xl text-center text-gray-300">
-          Use <span className={keyBindClass}>&uarr;</span> <span className={keyBindClass}>&darr;</span> to explore the sub-slide below!
+          Use <span className={`${keyBindClass} text-2xl px-3 py-1`}>&uarr;</span> <span className={`${keyBindClass} text-2xl px-3 py-1`}>&darr;</span> to explore the sub-slide below!
         </p>
       </div>
     </div>
@@ -47,42 +47,42 @@ export function KeyboardNavigationDown() {
       <div className="grid grid-cols-2 gap-6 text-lg">
         <div className="flex items-center gap-4 p-4 bg-indigo-500/10 rounded-lg">
           <div className="flex gap-2">
-            <span className={keyBindBlockClass}>&larr; &rarr;</span>
+            <span className={`${keyBindBlockClass} text-xl px-4 py-2`}>&larr; &rarr;</span>
           </div>
           <span className="text-gray-300">Navigate slides</span>
         </div>
 
         <div className="flex items-center gap-4 p-4 bg-indigo-500/10 rounded-lg">
           <div className="flex gap-2">
-            <span className={keyBindBlockClass}>&uarr; &darr;</span>
+            <span className={`${keyBindBlockClass} text-xl px-4 py-2`}>&uarr; &darr;</span>
           </div>
           <span className="text-gray-300">Sub-slide navigation</span>
         </div>
 
         <div className="flex items-center gap-4 p-4 bg-indigo-500/10 rounded-lg">
           <div className="flex gap-2">
-            <span className={keyBindBlockClass}>Esc</span>
+            <span className={`${keyBindBlockClass} text-xl px-4 py-2`}>Esc</span>
           </div>
           <span className="text-gray-300">Toggle overview grid</span>
         </div>
 
         <div className="flex items-center gap-4 p-4 bg-indigo-500/10 rounded-lg">
           <div className="flex gap-2">
-            <span className={keyBindBlockClass}>D</span>
+            <span className={`${keyBindBlockClass} text-xl px-4 py-2`}>D</span>
           </div>
           <span className="text-gray-300">Toggle drawing mode</span>
         </div>
 
         <div className="flex items-center gap-4 p-4 bg-indigo-500/10 rounded-lg">
           <div className="flex gap-2">
-            <span className={keyBindBlockClass}>C</span>
+            <span className={`${keyBindBlockClass} text-xl px-4 py-2`}>C</span>
           </div>
           <span className="text-gray-300">Clear drawings</span>
         </div>
 
         <div className="flex items-center gap-4 p-4 bg-indigo-500/10 rounded-lg">
           <div className="flex gap-2">
-            <span className={keyBindBlockClass}>Tab</span>
+            <span className={`${keyBindBlockClass} text-xl px-4 py-2`}>Tab</span>
           </div>
           <span className="text-gray-300">Next slide (alt)</span>
         </div>
